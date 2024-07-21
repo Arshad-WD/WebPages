@@ -1,0 +1,155 @@
+:root {
+    --pink: rgb(255, 40, 113);
+    --text-color-light: black;
+    --text-color-dark: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 170vh;
+    font-family: sans-serif;
+    background-image: radial-gradient(#040404, #181818);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.code-editor {
+    width: 90vw;
+    height: 150vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid #040404;
+}
+
+.code {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 1rem;
+}
+
+.output {
+    padding: .2rem; 
+    height: 1000%;
+    overflow-y: auto;
+}
+
+h1 {
+    font: 600 1.2rem sans-serif;
+    margin: 1rem 0;
+    color: var(--text-color-light); /* Default text color for light theme */
+}
+
+h1 > img {
+    width: 1.5rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.code textarea {
+    width: 100%;
+    height: calc(100% - 32rem);
+    background-color: #1c1c24;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.0rem;
+    resize: horizontal;
+}
+
+.code textarea::-webkit-scrollbar {
+    width: .5rem;
+}
+
+.code textarea::-webkit-scrollbar-thumb {
+    background-color: var(--pink);
+    border-radius: .7rem;
+}
+
+#result {
+    width: 100%;
+    height: 2000%;
+    border: none;
+}
+
+a {
+    background-color: lime;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    float: right;
+    cursor: pointer;
+}
+
+.expand {
+    transform: scale(90);
+}
+
+#blender {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    border-radius: 50%;
+    right: calc(23% - 21.5rem);
+    bottom: 1rem;
+    pointer-events: none;
+    background: white;
+    transition: all 0.5s ease;
+    mix-blend-mode: difference;
+}
+
+.s-module--toggle--2hd7F {
+    background: #ffffff;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    border-radius: 50%;
+    right: calc(23% - 21.5rem);
+    bottom: 1rem;
+    cursor: pointer;
+    background-image: url(https://www.svgrepo.com/show/381213/dark-mode-night-moon.svg);
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: none;
+}
+
+@media screen {
+    .s-module--toggle--2hd7F {
+        right: 1rem;
+        opacity: 0.8;
+    }
+}
+
+.s-module--hasZIndex--1QkpC {
+    background-color: #ffffff;
+    position: absolute;
+    background-image: url(https://www.svgrepo.com/show/432507/light-mode.svg);
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: none;
+    right: calc(23% - 21.5rem);
+    width: 3rem;
+    height: 3rem;
+    bottom: 1rem;
+    cursor: pointer;
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+    h1 {
+        color: var(--text-color-dark);
+    }
+}

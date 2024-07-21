@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codepen but Better</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="/compiler/style.css">
+    <style>
+        /* Light Theme */
+        @media (prefers-color-scheme: light) {
+            .css-code7 h1,
+            .js-code7 h1 {
+                color: black;
+            }
+        }
+
+        /* Dark Theme */
+        @media (prefers-color-scheme: dark) {
+            .css-code7 h1,
+            .js-code7 h1 {
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="toggle" class="s-module--toggle--2hd7F s-module--hasZIndex--1QkpC"></div>
+    <div class="s-module--blender--d9X_A" id="blender"></div>
+    <div class="code-editor">
+        <div class="code">
+            <div class="html-code7">
+                <h1><img src="/compiler/images/html.png" alt="HTML"> HTML </h1>
+                <textarea id="temp7"></textarea>
+            </div>
+            <div class="css-code7">
+                <h1><img src="/compiler/images/CSS.png" alt="CSS and SCSS"> CSS AND SCSS </h1>
+                <textarea id="temp7"></textarea>
+            </div>
+            <div class="js-code7">
+                <h1><img src="/compiler/images/js.png" alt="JavaScript">Js</h1>
+                <textarea id="temp7"></textarea>
+            </div>
+        </div>
+        <div class="output">
+            <iframe id="result"></iframe>
+        </div>
+    </div>
+    <script>
+        document.getElementById('toggle').addEventListener('click', () => {
+            document.getElementById('blender').classList.toggle('expand');
+            document.getElementById('toggle').classList.toggle('s-module--hasZIndex--1QkpC');
+        });
+    </script>
+    <!-- Link to JavaScript file -->
+    <script src="script7.js"></script>
+</body>
+</html>

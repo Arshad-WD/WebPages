@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+#page1 {
+    min-height: 100vh;
+    background-color: rgb(15, 14, 14);
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+#page1 .content {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: white;
+    z-index: 1;
+}
+
+@media screen and (max-width: 860px) {
+    #page1 .content {
+        top: 30%;
+        font-size: 1em;
+    }
+}
+
+.title {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    max-width: 70%;
+}
+
+.subtitle {
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 3%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 80;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: "Zilla Slab", serif;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-bar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: 0.5s;
+    font-family: "Albert Sans", sans-serif;
+}
+
+.nav-bar a:hover {
+    color: rgb(164, 224, 203);
+}
+
+.nav-bar:hover a:not(:hover) {
+    filter: blur(5px);
+}
+
+#page1 h1 {
+    padding-top: 200px;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: "Albert Sans", sans-serif;
+    color: white;
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 99;
+   overflow: auto;
+   overflow:visible;
+   list-style-type: none; 
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    background: transparent;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background: transparent;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown:hover a:not(:hover) {
+    filter: blur(0px);
+}
+
+
+/* Arshad_Portfolio */
+
